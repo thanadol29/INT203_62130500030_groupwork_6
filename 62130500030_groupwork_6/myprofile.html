@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Thanadol int203</title>
+
+  <!-- https://google.github.io/material-design-icons/#icon-font-for-the-web -->
+  <!-- Using via Google Web Fonts -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+
+  <!-- https://tailwindcss.com/docs/installation -->
+  <!-- Using Tailwind via CDN -->
+  <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet" />
+
+  <!-- https://v3.vuejs.org/guide/installation.html#release-notes -->
+  <!-- Vue CDN -->
+  <script src="https://unpkg.com/vue@next"></script>
+  <link rel="stylesheet" href='https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-alpha1/dist/css/bootstrap.min.css'>
+  <link rel="stylesheet" href="style.css">
+
+
+</head>
+<!-- Thanadol Chuesai 62130500030 -->
+
+<body>
+
+  <div id="app" class="container mt-5 d-flex justify-content-center">
+    <div class="card p-3">
+      <div class="d-flex align-items-center">
+        <div class="image"> <img v-bind:src="url" class="rounded" width="300" /></div>
+        <div class="ml-3 w-100">
+          <h4 class="mb-0 mt-0">{{firstname}} {{lname}}</h4> 
+          <div class="p-2 mt-2 bg-primary d-flex justify-content-between rounded text-white stats">
+            <div class="d-flex flex-column"> <span class="articles">email</span> <span class="number1">{{email}}</span>
+            </div>
+            <div class="d-flex flex-column"> <span class="followers">phone</span> <span class="number2">{{phone}}</span>
+            </div>
+            <div class="d-flex flex-column"> <span class="rating">age</span> <span class="number3">{{age}}</span>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <div>
+
+        <form @submit="checkForm" method="post">
+          <ul>
+            <li v-for="error in errors" class="text-red-500">{{ error }}</li>
+          </ul>
+          <div>
+            <div>
+              <label for="firstname">First Name :</label>
+              <input type="text" id="name" v-model="firstname" name="firstname">
+            </div>
+            <div class="pt-2"><label for="lastname">Last name :</label>
+              <input type="text"  id="lastname" v-model="lastname" name="lastname" >
+            </div>
+            <div class="pt-2"><label for="age">Age :</label>
+              <input type="text" id="age" v-model="age" name="age">
+            </div>
+            <div class="pt-2 "><label for="email">Email :</label>
+              <input type="text" id="email" v-model="email" name="email">
+            </div>
+            <div class="pt-2"><label for="phone">Phone Number :</label>
+              <input type="text" id="phone" v-model="phone" name="phone">
+            </div>
+            <input class="" type="submit" value="Submit">
+          </div>
+        </form>
+
+
+      </div>
+    </div>
+  </div>
+
+  <!-- Thanadol Chuesai 62130500030 -->
+  <!-- my main.js -->
+
+  <script src="//cdnjs.cloudflare.com/ajax/libs/validate.js/0.13.1/validate.min.js"></script>
+  <script src="./main.js"></script>
+</body>
+
+</html>
