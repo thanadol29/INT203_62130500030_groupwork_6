@@ -46,34 +46,36 @@
 
       <div>
 
-        <form @submit="checkForm" method="post">
-          <ul>
-            <li v-for="error in errors" class="text-red-500">{{ error }}</li>
-          </ul>
+        <form @submit="checkForm" onsubmit="submitForm()">
+          
           <div>
             <div>
               <label for="firstname">First Name :</label>
-              <input type="text" id="name" v-model="firstname" name="firstname">
+              <input class="bg-blue-100" type="text" id="name" v-model="firstname" name="firstname">
             </div>
             <div class="pt-2"><label for="lastname">Last name :</label>
-              <input type="text"  id="lastname" v-model="lastname" name="lastname" >
+              <input class="bg-blue-100" type="text"  id="lastname" v-model="lastname" name="lastname" >
             </div>
             <div class="pt-2"><label for="age">Age :</label>
-              <input type="text" id="age" v-model="age" name="age">
+              <input  class="bg-blue-100" type="text" id="age" v-model="age" name="age">
             </div>
             <div class="pt-2 "><label for="email">Email :</label>
-              <input type="text" id="email" v-model="email" name="email">
+              <input  class="bg-blue-100"type="text" id="email" v-model="email" name="email">
             </div>
             <div class="pt-2"><label for="phone">Phone Number :</label>
-              <input type="text" id="phone" v-model="phone" name="phone">
+              <input  class="bg-blue-100" type="text" id="phone" v-model="phone" name="phone">
             </div>
-            <input class="" type="submit" value="Submit">
+            <ul>
+              <li v-for="error in errors" class="text-red-500">{{ error }}</li>
+            </ul>
+            <input type="submit" value="Submit">
           </div>
         </form>
 
 
       </div>
     </div>
+    
   </div>
 
   <!-- Thanadol Chuesai 62130500030 -->
